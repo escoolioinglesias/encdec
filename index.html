@@ -1,0 +1,96 @@
+
+<html>
+    <head>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+var inputBox = document.createElement('input');
+inputBox.type = 'text';
+inputBox.id = 'inputBox';
+document.body.appendChild(inputBox);
+
+var encodeButton = document.createElement('button');
+encodeButton.innerHTML = 'encode';
+encodeButton.id = 'encodeButton';
+document.body.appendChild(encodeButton);
+
+encodeButton.addEventListener('click', function() {
+  var input = document.getElementById('inputBox').value;
+  var encoded = btoa(input);
+  var copyText = document.createElement('textarea');
+  copyText.value = encoded;
+  document.body.appendChild(copyText);
+  copyText.select();
+  document.execCommand('copy');
+  document.body.removeChild(copyText);
+});
+
+inputBox.style.position = 'absolute';
+inputBox.style.top = '50%';
+inputBox.style.left = '50%';
+inputBox.style.transform = 'translate(-50%, -50%)';
+encodeButton.style.position = 'absolute';
+encodeButton.style.top = '50%';
+encodeButton.style.left = '50%';
+encodeButton.style.transform = 'translate(-50%, -50%)';
+
+encodeButton.style.left = '60%';
+
+var inputBox2 = document.createElement('input');
+inputBox2.type = 'text';
+inputBox2.id = 'inputBox2';
+document.body.appendChild(inputBox2);
+inputBox2.style.position = 'absolute';
+inputBox2.style.top = '60%';
+inputBox2.style.left = '50%';
+inputBox2.style.transform = 'translate(-50%, -50%)';
+
+var decodeButton = document.createElement('button');
+decodeButton.innerHTML = 'decode';
+decodeButton.id = 'decodeButton';
+document.body.appendChild(decodeButton);
+decodeButton.style.position = 'absolute';
+decodeButton.style.top = '60%';
+decodeButton.style.left = '50%';
+decodeButton.style.transform = 'translate(-50%, -50%)';
+
+decodeButton.style.left = '60%';
+
+decodeButton.addEventListener('click', function() {
+  var input = document.getElementById('inputBox2').value;
+  var decoded = atob(input);
+  var copyText = document.createElement('textarea');
+  copyText.value = decoded;
+  document.body.appendChild(copyText);
+  copyText.select();
+  document.execCommand('copy');
+  document.body.removeChild(copyText);
+});
+
+inputBox.style.top = '50%';
+inputBox.style.left = '50%';
+inputBox.style.transform = 'translate(-50%, -50%)';
+encodeButton.style.top = '50%';
+encodeButton.style.left = '50%';
+encodeButton.style.transform = 'translate(-50%, -50%)';
+inputBox2.style.top = '53%';
+inputBox2.style.left = '50%';
+inputBox2.style.transform = 'translate(-50%, -50%)';
+decodeButton.style.top = '53%';
+decodeButton.style.left = '50%';
+decodeButton.style.transform = 'translate(-50%, -50%)';
+
+encodeButton.style.left = '56.5%';
+decodeButton.style.left = '56.5%';
+
+document.body.style.backgroundColor = 'black';
+
+encodeButton.style.borderRadius = '5px';
+decodeButton.style.borderRadius = '5px';
+
+encodeButton.style.backgroundColor = 'white';
+decodeButton.style.backgroundColor = 'white';
+});
+        </script>
+    </head>
+</html>
